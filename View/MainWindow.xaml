@@ -7,11 +7,11 @@
             xmlns:local="clr-namespace:ClientXMessanger"
             mc:Ignorable="d"
 
-            AllowsTransparency="True"
-            WindowStyle="None"
+            AllowsTransparency="False"
+            WindowStyle="SingleBorderWindow"
 
             Title="XMAssenger" Height="450" Width="800">
     <Grid>
-
+        <Button Background="AntiqueWhite" Height="25" Content="50"/>
     </Grid>
 </Window>
