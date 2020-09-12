@@ -13,13 +13,27 @@ namespace ClientXMessanger.ViewModels
         /// </summary>
         private Window _window { get; set; }
 
-
+        /// <summary>
+        /// Строка заголовка окна
+        /// </summary>
+        private string _Title { get; set; } = "XMessanger";
 
         #endregion
 
         #region Public members
 
-
+        /// <summary>
+        /// Строка заголовка окна
+        /// </summary>
+        public string Title
+        {
+            get => _Title;
+            set
+            {
+                var title = _Title;
+                Set(ref title, value);
+            }
+        }
 
         #endregion
 
