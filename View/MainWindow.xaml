@@ -28,7 +28,13 @@
     
     <Grid>
         <!-- IsHitTestVisiblyChrome -->
-        <Border VerticalAlignment="Top" Background="Green"  HorizontalAlignment="Stretch" Height="{Binding WindowTitleHeight}"/>
+        <Border VerticalAlignment="Top" Background="LightGray"  HorizontalAlignment="Stretch" Height="{Binding WindowTitleHeight}">
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Style="{StaticResource WindowControlButton}" Content="_"/>
+                <Button Style="{StaticResource WindowControlButton}" Content="[ ]"/>
+                <Button Style="{StaticResource CloseButtonWindow}" Content="X"/>
+            </StackPanel>
+        </Border>
         
     </Grid>
 </Window>

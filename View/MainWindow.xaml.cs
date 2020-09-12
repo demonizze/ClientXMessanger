@@ -16,8 +16,7 @@ namespace ClientXMessanger.View
             
             #endregion
 
-            // Подключения источника данных
-            //this.DataContext = new MainWindowViewModel();
+           
         }
     }
 }
