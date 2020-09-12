@@ -5,13 +5,30 @@
             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:local="clr-namespace:ClientXMessanger"
+            xmlns:view="clr-namespace:ClientXMessanger.View"
+            xmlns:viewmodel="clr-namespace:ClientXMessanger.ViewModels"
             mc:Ignorable="d"
 
-            AllowsTransparency="False"
-            WindowStyle="SingleBorderWindow"
+            AllowsTransparency="True"
+            WindowStyle="None"
 
-            Title="{Binding Title}" Height="450" Width="800">
+            Title="{Binding Title}" Height="650" Width="1100">
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="{Binding WindowTitleHeight}"
+            CornerRadius="0"
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            UseAeroCaptionButtons="True"
+            />
+    </WindowChrome.WindowChrome>
+
+    <Window.DataContext>
+        <viewmodel:MainWindowViewModel/>
+    </Window.DataContext>
+    
     <Grid>
+        <!-- IsHitTestVisiblyChrome -->
+        <Border VerticalAlignment="Top" Background="Green"  HorizontalAlignment="Stretch" Height="{Binding WindowTitleHeight}"/>
         
     </Grid>
 </Window>

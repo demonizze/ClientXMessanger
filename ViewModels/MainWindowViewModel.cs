@@ -18,6 +18,12 @@ namespace ClientXMessanger.ViewModels
         /// </summary>
         private string _Title { get; set; } = "XMessanger";
 
+        /// <summary>
+        /// Высота окна перемещения
+        /// </summary>
+        private int _WindowTitleHeight { get; set; } = 20;
+
+        private Thickness _resizeBorderThickness { get; set; } = new Thickness(4);
         #endregion
 
         #region Public members
@@ -35,6 +41,33 @@ namespace ClientXMessanger.ViewModels
             }
         }
 
+        /// <summary>
+        /// Высота окна перемещения
+        /// </summary>
+        public int WindowTitleHeight
+        {
+            get => _WindowTitleHeight;
+
+            set
+            {
+                var windowTitleHeight = _WindowTitleHeight;
+                Set(ref windowTitleHeight, value);
+            } 
+        }
+
+        /// <summary>
+        /// Толщина границы регулировки размера окна
+        /// </summary>
+        public Thickness ResizeBorderThickness
+        {
+            get => _resizeBorderThickness;
+            set
+            {
+                Thickness tmpThickness = _resizeBorderThickness;
+                Set<Thickness>(ref tmpThickness, value);
+            }
+        }
+
         #endregion
 
         #region Constructor
@@ -43,11 +76,10 @@ namespace ClientXMessanger.ViewModels
         /// Базовый конструктор модели предсталения окна
         /// </summary>
         /// <param name="window">Окно подключающее DataContext</param>
-        public MainWindowViewModel(Window window)
+        public MainWindowViewModel()
         {
             // Инициализация компонентов
-            _window = window;
-
+            
 
         }
 
